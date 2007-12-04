@@ -1,0 +1,37 @@
+body, td, input, select, option, th {
+	font-family: 'Bitstream Vera Sans', Verdana, sans-serif;
+	font-size: 12px;
+}
+#idss {
+	width: 100%;
+	text-align: right;
+}
+table {
+	border-collapse: collapse;
+}
+
+input[type=button] {
+	font-weight: bold;
+}
+
+.blue {
+	background-color: #5598D7;
+	color: white;
+}
+.green {
+	background-color: #55bb98;
+	color: white;
+}
+.red {
+	background-color: #BB5454;
+	color: white;
+}
+
+#idmessage {
+	display: none;
+	background-color: orange;
+	color: black;
+	font-weight: bold;
+	padding: 3px;
+	text-align: center;
+}
