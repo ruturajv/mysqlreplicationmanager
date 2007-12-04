@@ -4,7 +4,7 @@
 The `$server` array holds all the Slave and Master database authentication tokens.
 
 == `$server` Variable ==
-Each `$server[numeric-index]` array has another associative array listed as below
+`$server[numeric-index]` is an associative array listed as below
   * `slave_name`: A display name of the Slave Server
   * `slave_host`: Host name of the Server, could be the IP address
   * `slave_username`: The `super` privileged username, normally the `root`
