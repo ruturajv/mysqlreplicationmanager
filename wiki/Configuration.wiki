@@ -31,3 +31,5 @@ $server[$iss]['master_username'] = 'root';
 $server[$iss]['master_password'] = '<rootpassword>';
 $server[$iss]['master_port'] = 3306;
 }}}
+
+Update the values accordingly.
