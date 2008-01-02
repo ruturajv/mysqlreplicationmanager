@@ -1,4 +1,5 @@
 #summary Configuration for the replication mananger
+#labels Featured
 
 = Configuration =
 The `$server` array holds all the Slave and Master database authentication tokens.
