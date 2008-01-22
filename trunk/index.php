@@ -6,10 +6,9 @@ require_once "config.inc.php";
 <html>
 <head>
 <title>Replication Manager (Beta)</title>
-<script type="text/javascript" src="http://yui.yahooapis.com/2.3.1/build/utilities/utilities.js"></script>
-<!-- <script src="http://yui.yahooapis.com/2.3.1/build/animation/animation-min.js"></script>  -->
-<script type="text/javascript" src="replication-manager.js"></script>
-<script type="text/javascript" src="3dparty.js"></script>
+<script type="text/javascript" src="js/y-utilities.js"></script>
+<script type="text/javascript" src="js/replication-manager.js"></script>
+<script type="text/javascript" src="js/3dparty.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href="replication-manager.css" />
 </head>
 <body>
