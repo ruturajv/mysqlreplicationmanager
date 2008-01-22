@@ -68,7 +68,11 @@ function changeSlave() {
 						oo.value = data['master_logs'][i];
 						oo.text = data['master_logs'][i];
 						idmasterlogs.appendChild(oo);
+						if( data['master_logs'][i] == data['slave']['Relay_Master_Log_File'] ) {
+							oo.selected = true;
+						}
 					}
+					document.forms['fml'].elements['mlog_pos'].value = data['slave']['Exec_Master_Log_Pos'];
 
 					document.forms['fcmt'].elements['ml'].value = data['slave']['Relay_Master_Log_File'];
 					document.forms['fcmt'].elements['mlog_pos'].value = data['slave']['Exec_Master_Log_Pos'];
