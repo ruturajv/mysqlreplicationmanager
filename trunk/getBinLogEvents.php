@@ -46,7 +46,7 @@ if (($_POST['ml'] != '') ) {
 		echo "<td>{$row['Pos']}</td>";
 		echo "<td>{$row['End_log_pos']}</td>";
 		$lastindex = $row['End_log_pos'];
-		echo "<td><div style='width:400px; overflow:auto;'>" . htmlspecialchars($row['Info']) . "</div></td>";
+		echo "<td><div style='width:400px; overflow:auto;'>" . htmlspecialchars(substr($row['Info'], 0, 1000)) . "</div></td>";
 		echo "</tr>\n";
 	}
 	$mysqli->close();
