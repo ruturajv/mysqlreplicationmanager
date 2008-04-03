@@ -36,6 +36,43 @@ for ($i=0; $i<=$iss; $i++) {
 
 
 <td width="50%" valign="top">
+<div style="border: 1px solid #bb5454; padding: 5px;">
+<form name="fssc">
+<input type="hidden" id="idserverid" name="fss" value="NA" />
+<input type="hidden" id="idservercommand" name="sc" value="" />
+<input type="button" onclick="changeSlave();" value="Refresh" class="blue" />&nbsp;&nbsp;&nbsp;
+<input type="button" onclick="startIO();" value="Start IO Thread" class="green" />&nbsp;&nbsp;&nbsp;
+<input type="button" onclick="startSQL();" value="Start SQL Thread" class="green" />&nbsp;&nbsp;&nbsp;
+</form>
+<br/>
+<b>Set Slave</b>
+<form name="fcmt">
+<input type="hidden" id="idserverids" name="fss" value="NA" />
+<table border="1">
+<tr>
+<td>Master Log File</td>
+<td><input type="text" name="ml" size="20"></td>
+</tr>
+<tr>
+<td>Master Log Position</td>
+<td><input type="text" name="mlog_pos" size="10"></td>
+</tr>
+</table>
+<input type="button" name="bss" value="Set Slave" class="red" onClick="setSlave()" title="Will Stop slave, set and start !"/>
+</form>
+
+<br/>
+
+<form name="fsss">
+<input type="hidden" id="idsssid" name="fss" value="" />
+<input type="hidden" id="idssscontrol" name="ssscontrol" value="" />
+<input type="button" value="Stop slave" class="red" onclick="controlSlave('stop')" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Start slave" class="green" onclick="controlSlave('start')" />
+</form>
+</div>
+
+<br/>
 <b>Slave Status</b>
 <table width="100%" border="1">
 <tr>
@@ -71,41 +108,6 @@ for ($i=0; $i<=$iss; $i++) {
 	<td id="idreplicatedtables"></td>
 </tr>
 </table>
-<form name="fssc">
-<input type="hidden" id="idserverid" name="fss" value="NA" />
-<input type="hidden" id="idservercommand" name="sc" value="" />
-<input type="button" onclick="changeSlave();" value="Refresh" class="blue" />&nbsp;&nbsp;&nbsp;
-<input type="button" onclick="startIO();" value="Start IO Thread" class="green" />&nbsp;&nbsp;&nbsp;
-<input type="button" onclick="startSQL();" value="Start SQL Thread" class="green" />&nbsp;&nbsp;&nbsp;
-</form>
-<br/>
-<b>Set Slave</b>
-<form name="fcmt">
-<input type="hidden" id="idserverids" name="fss" value="NA" />
-<table border="1">
-<tr>
-<td>Master Log File</td>
-<td><input type="text" name="ml" size="20"></td>
-</tr>
-<tr>
-<td>Master Log Position</td>
-<td><input type="text" name="mlog_pos" size="10"></td>
-</tr>
-</table>
-<input type="button" name="bss" value="Set Slave" class="red" onClick="setSlave()" />
-</form>
-
-<br/>
-<br/>
-
-<form name="fsss">
-<input type="hidden" id="idsssid" name="fss" value="" />
-<input type="hidden" id="idssscontrol" name="ssscontrol" value="" />
-<input type="button" value="Stop slave" class="red" onclick="controlSlave('stop')" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="button" value="Start slave" class="green" onclick="controlSlave('start')" />
-</form>
-
 </td>
 
 
