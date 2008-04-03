@@ -1,4 +1,4 @@
-var idmaster, idslaveIO, idslaveSQL, idmasterlogfile, idrelaylogfile, idexecmasterlogpos, idlasterror, idserverid, idservercommand, idmasterlogs, idserveridm, idserverids, idsssid, idssscontrol, idmessage, idreplicatedtables;
+var idmaster, idslaveIO, idslaveSQL, idmasterlogfile, idrelaylogfile, idexecmasterlogpos, idlasterror, idserverid, idservercommand, idmasterlogs, idserveridm, idserverids, idsssid, idssscontrol, idmessage, idreplicatedtables, lastserverid;
 
 YAHOO.util.Event.addListener(window, "load", function(){
 	// all slave status ids
@@ -76,6 +76,11 @@ function changeSlave() {
 
 					document.forms['fcmt'].elements['ml'].value = data['slave']['Relay_Master_Log_File'];
 					document.forms['fcmt'].elements['mlog_pos'].value = data['slave']['Exec_Master_Log_Pos'];
+
+					if (lastserverid != $("idserverid").value) {
+						$("idmasterlogstable").innerHTML = '';
+					}
+					lastserverid = $("idserverid").value;
 					throb(false);
 				 },
 				failure: function(o) {
